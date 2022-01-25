@@ -28,3 +28,170 @@ a{
 }
 
 /* header */
+
+.header{
+  width: 100%;
+  background: #000;
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo_item{
+  margin: 0 2.5%;
+}
+
+.header__nav{
+  width: 90%;
+  margin: 0 1.5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav_item{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12pt;
+}
+
+.header__nav_link{
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+
+.header__nav_link:after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 0;
+  height: 4px;
+  background-color: #b88b58;
+  transition: width 0.2s linear;
+}
+
+.header__nav_link:hover{
+  color: #b88b58;
+}
+
+.header__nav_link:hover:after{
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 4px;
+  background-color: #b88b58;
+  transition: width 0.2s linear;
+}
+
+/* header__hamburger_menu */
+
+.header__hamburger_menu{
+  display: none; 
+
+  margin-right: 5%;
+}
+
+#header__menu_toggle{
+  opacity: 0;
+}
+
+.header__menu_btn{
+  height: 30%;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  z-index: 1;  
+}
+
+.header__menu_btn > span,
+.header__menu_btn > span::before,
+.header__menu_btn > span::after{
+  width: 30px;
+  height: 4px;
+  
+  display: block;
+  position: absolute;
+
+  background-color: #fff;
+
+  transition: background-color 0.2s linear;
+}
+
+.header__menu_btn:hover > span,
+.header__menu_btn:hover > span::before,
+.header__menu_btn:hover > span::after{
+  background-color: #b88b58;
+}
+
+.header__menu_btn > span:before{
+  content: "";
+  top: -8px;
+
+  transition: all 0.3s linear;
+}
+
+.header__menu_btn > span::after{
+  content: "";
+  top: 8px;
+}
+
+#header__menu_toggle:checked ~ .header__menu_btn > span{
+  transform: rotate(45deg);
+}
+
+#header__menu_toggle:checked ~ .header__menu_btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+
+#header__menu_toggle:checked ~ .header__menu_btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1050px) {
+  .header__hamburger_menu{
+    display: inline;
+  }
+
+  .header__nav{
+    width: 250px;
+    margin: 0;
+
+    right: 0;
+    top: -300%;
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    transition: top 0.2s linear;
+  }
+
+  .header__nav.active{
+    top: 56px;  
+  }
+
+  .header__nav_item a{
+    margin-bottom: 15px;
+    padding: 12px 24px;
+
+    display: block;
+    color: #fff;
+  }
+
+}
+
