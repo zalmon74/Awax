@@ -27,6 +27,20 @@ a{
   margin: 0 auto;
 }
 
+/* slider */
+
+.intro__slider{
+  min-width: 0;
+}
+
+.slick-list{
+  overflow: hidden;
+}
+
+.slick-track{
+  display: flex;
+}
+
 /* header */
 
 .header{
@@ -160,6 +174,116 @@ a{
   transform: rotate(90deg);
 }
 
+/* intro */
+
+.intro{
+  width: 100%;
+  
+  background: url("../img/intro/intro_bg.png") no-repeat center center fixed;
+  background-size: cover;
+
+  color: #fff;
+}
+
+.intro__inner{
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+/* slider */
+
+.intro .slick-dots{
+  margin: 4% 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro .slick-dots li{
+  margin: 0 10px;
+  
+
+  list-style: none;
+  align-self: center;
+}
+
+.intro .slick-dots li.slick-active button{
+  background-color: #b88b58;
+}
+
+.intro .slick-dots button{
+  width: 10px;
+  height: 15px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 2px solid #b88b58;
+  border-radius: 50%;
+}
+
+.intro__title_item, .intro__calc_us_item{
+  width: 100%;
+  
+  text-transform: uppercase;
+  text-align: center;
+
+  font-weight: normal;
+  font-size: 30pt;
+}
+
+.intro__title_item{
+  margin-top: 10%;
+
+  font-weight: 700;
+  font-size: 60pt;
+}
+
+.intro__title_item span{
+  color: #b88b58;
+}
+
+.intro__calc_us_item{
+ margin-top: 2.5%;
+}
+
+.intro__button_item{
+  display: flex;
+  justify-content: center;
+}
+
+.intro__button_item_a{
+  margin: 7.5% 0;
+}
+
+.intro__button{
+  width: 15vw;
+  height: 4vw;
+
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  
+  border: none;
+  border-radius: 99em;
+
+  background: #b88b58;
+  color: #fff;
+
+  transition: background 0.2s linear;
+}
+
+.intro__button:hover, .intro__button:focus{
+  background: #000;
+}
+
 @media screen and (max-width: 1050px) {
   .header__hamburger_menu{
     display: inline;
@@ -170,7 +294,7 @@ a{
     margin: 0;
 
     right: 0;
-    top: -300%;
+    top: -1500px;
 
     display: flex;
     flex-direction: column;
@@ -195,3 +319,11 @@ a{
 
 }
 
+@media screen and (max-width: 1200px){
+  .intro__title_item{
+    font-size: 6.567vw;
+  }
+  .intro__calc_us_item{
+    font-size: 3.28vw;
+  }
+}
