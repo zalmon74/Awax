@@ -200,7 +200,7 @@ a{
 /* slider */
 
 .intro .slick-dots{
-  margin: 4% 0;
+  margin: 4.8% 0;
   padding: 0;
 
   display: flex;
@@ -279,6 +279,7 @@ a{
   background: #b88b58;
   color: #fff;
 
+  cursor: pointer;
   transition: background 0.2s linear;
 }
 
@@ -286,7 +287,114 @@ a{
   background: #000;
 }
 
+/* about */
+
+.about{
+  background: #f7f7f7;
+}
+
+.about__inner{
+  width: 100%;
+}
+
+.about__title_item{
+  width: 100%;
+
+  margin: 5% 0;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about__title_h2{
+  font-weight: 700;
+  font-size: 30pt;
+}
+
+.about__title_h3{
+  margin: 1.5% 0;
+
+  font-weight: 600;
+  font-size: 14pt;
+
+  color: #aeaeae;
+}
+
+.about__inner{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__video_item{
+  width: 100%;
+
+  margin-right: 5%;
+
+  align-self: start;
+}
+
+.about__video_item video{
+  width: 600px;
+
+  cursor: pointer;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.about__video_item video::-webkit-media-controls {
+  display: none;
+}
+
+.about__video_item:hover video::-webkit-media-controls {
+  display: flex;
+}
+
+.about__text_item{
+  margin: 0 2.5%;
+
+  font-weight: normal;
+  text-align: justify;
+}
+
+.about__button_item{
+  margin: 10% 0;
+}
+
+.about__button{
+  width: 200px;
+  height: 40px;
+
+  font-weight: 700;
+  font-size: 12pt;
+  text-transform: uppercase;
+
+  border-radius: 99em;
+  border: 0;
+
+  cursor: pointer;
+
+  color: #fff;
+  background: #b88b58;
+}
+
+@media screen and (max-width: 1200px){
+  .intro__title_item{
+    font-size: 6.567vw;
+  }
+  .intro__calc_us_item{
+    font-size: 3.28vw;
+  }
+}
+
+/* media small */
+
 @media screen and (max-width: 1050px) {
+
+  /* header */
+
   .header__hamburger_menu{
     display: inline;
   }
@@ -319,13 +427,55 @@ a{
     color: #fff;
   }
 
+  /* about */
+
+  .about__inner{
+    flex-direction: column-reverse;
+    
+    justify-content: baseline;
+  }
+  
+  .about__video_item video{
+    margin: 0 5%;
+    width: 90%;
+  }
+
+  .about__text_item{
+    margin: 5% 5%;
+  }
+
+  .about__button_item{
+    text-align: center;
+  }
+
+  .about__button{
+    margin: 0;
+    height: 60px;
+  }
+
 }
 
-@media screen and (max-width: 1200px){
-  .intro__title_item{
-    font-size: 6.567vw;
+/* media mobile */
+
+@media screen and (max-width: 768px) {
+
+  /* header */
+
+  .intro__button{
+    width: 150px;
+    height: 30px;
+
+    font-size: 13pt;
   }
-  .intro__calc_us_item{
-    font-size: 3.28vw;
+
+  /* about */
+
+  .about__inner{
+    flex-direction: column;
   }
+
+  .about__video_item{
+    margin-bottom: 5%;
+  }
+
 }
