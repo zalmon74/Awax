@@ -42,6 +42,13 @@ $(document).ready(function(){
   });
   // Team slider
   StartSliderTeam();
+  //clients slider
+  $(".clients__inner").slick({
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
 
 });
 

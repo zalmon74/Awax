@@ -777,6 +777,77 @@ a{
   background: #b88b58;
 }
 
+/* clients */
+
+.clients{
+  background: #f7f7f7;
+}
+
+.clients__title{
+  width: 100%;
+  padding-top: 5%;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.clients__title h2{
+  font-size: 30pt;
+  font-weight: 700;
+}
+
+.clients__title h3{
+  margin-top: 1%;
+  font-weight: 600;
+
+  color: #aeaeae;
+}
+
+.clients__inner{
+  min-width: 0;
+}
+
+.clients__item{
+  margin: 1.5% 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.clients__img{
+  margin: 2.5% 0;
+}
+
+.clients__name h4{
+  text-transform: capitalize;
+  font-size: 24pt;
+  font-weight: 700;
+}
+
+.clients__name h5{
+  font-size: 18pt;
+  font-weight: 600;
+}
+
+.clients__delimiter{
+  margin-top: 2.5%;
+  margin-bottom: 1.5%;
+}
+
+.clients__text{
+  margin: 0 2.5%;
+  font-weight: 300;
+
+  color: #7e7e7e;
+}
+
+.clients .slick-dots{
+  margin: 0;
+  margin-bottom: 5%;
+}
+
 
 @media screen and (max-width: 1200px){
   .intro__title_item{
