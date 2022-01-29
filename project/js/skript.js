@@ -40,6 +40,9 @@ $(document).ready(function(){
       }
     };
   });
+  // Team slider
+  StartSliderTeam();
+
 });
 
 // Play Stop Video
@@ -106,4 +109,25 @@ function SwitchActiveElementForProjectsMenu(element){
         break;
     }; 
   }
+}
+
+// Start slider team
+function StartSliderTeam() {
+  let width = $(window).width();
+  let count_slides_to_show = 0;
+  if (width > "900")
+    count_slides_to_show = 3;
+  else if (width > "600")
+    count_slides_to_show = 2;
+    else
+    count_slides_to_show = 1;
+
+  $(".team__inner").slick({
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToShow: count_slides_to_show,
+    slidesToScroll: count_slides_to_show
+  });
 }
