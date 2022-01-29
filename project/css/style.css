@@ -863,6 +863,105 @@ a{
   justify-content: space-around;
 }
 
+.price{
+  border: 1px solid #cfcfcf;
+  border-left: 0;
+  border-right: 0;
+  background: #ededed;
+}
+
+.price__title{
+  width: 100%;
+  padding-top: 5%;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price h2{
+  font-size: 30pt;
+  font-weight: 700;
+}
+
+.price h3{
+  margin-top: 1%;
+  font-weight: 600;
+
+  color: #aeaeae;
+}
+
+.price__inner{
+  padding: 2.5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.price__item{
+  width: 255px;
+  margin: 2.5% 0;
+
+  background: #fff;
+  text-align: center;
+}
+
+.price__name{
+  padding-top: 35px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+.price__price{
+  font-size: 30pt;
+  font-weight: 700;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.price__price span{
+  margin-bottom: 27px;
+
+  font-size: 10pt;
+  font-weight: normal;
+  
+  color: #aeaeae;
+}
+
+.price__text{
+  font-size: 10pt;
+  color: #7e7e7e;
+}
+.price__inner hr{
+  width: 5%;
+}
+
+.price__button{
+  padding: 30px 0;
+}
+
+.price__button button{
+  width: 125px;
+  height: 40px;
+
+  text-transform: uppercase;
+  
+  border: none;
+  border-radius: 99em;
+
+  background: #373737;
+  color: #fff;
+
+  cursor: pointer;
+  transition: background 0.2s linear;
+}
+
+.price__button button:hover{
+  background: #b88b58;
+}
+
 
 @media screen and (max-width: 1200px){
   .intro__title_item{
@@ -937,6 +1036,13 @@ a{
     height: 60px;
   }
 
+}
+
+@media screen and (max-width: 950px) {
+  /* price */
+  .price__item{
+    width: 320px;
+  }
 }
 
 /* media mobile */
