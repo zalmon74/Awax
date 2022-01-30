@@ -1166,6 +1166,68 @@ a{
   color: #7e7e7e;
 }
 
+/* tell */
+
+.tell{
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.tell__inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tell__item{
+  margin: 2.5% 1%;
+}
+
+.tell__item.links{
+  width: 70%;
+}
+
+.tell_links{
+  display: flex;
+  justify-content: space-around;
+}
+
+.tell__link_item button{
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: background 0.2s linear;
+}
+
+.tell__link_item.twitter button{
+  background: #34c5f0;
+}
+
+.tell__link_item.linkedin button{
+  background: #127cb4;
+}
+
+.tell__link_item.facebook button{
+  background: #336297;
+}
+
+.tell__link_item.googleplus button{
+  background: #e74237;
+}
+
+.tell__link_item.pinterest button{
+  background: #b71c29;
+}
+
 @media screen and (max-width: 1200px){
   .intro__title_item{
     font-size: 6.567vw;
